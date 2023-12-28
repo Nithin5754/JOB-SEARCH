@@ -34,7 +34,7 @@ const {id,company,order,title,dates,duties}=isJobs[value]
   <div className="btn-container">
      {
       isJobs.map((job,index)=>{
-        return <button className='btn' key={index} onClick={()=>setValue(index)}>{job.company}</button>
+        return <button className={`job-btn ${value===index&&'active-btn'}`} key={index} onClick={()=>setValue(index)}>{job.company}</button>
       })
      }
   </div>
